@@ -12,7 +12,11 @@ app.use((req, res, next) => {
 });
 
 app.get('/', (req, res) => {
-  res.send('Try /random_joke, /random_ten, /jokes/random, or /jokes/ten , /jokes/random/<any-number>');
+  res.send('Hello World! Welcome to the root endpoint, I hope you enjoy your stay. You should try jokes/count');
+});
+
+app.get('/jokes/count', (req, res) => {
+  res.send(JSON.stringify({'count':count}));
 });
 
 app.get('/ping', (req, res) => {
